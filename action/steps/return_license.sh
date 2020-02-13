@@ -10,7 +10,7 @@ if [[ -n "$UNITY_SERIAL" ]]; then
     /opt/Unity/Editor/Unity \
       -batchmode \
       -nographics \
-      -logFile ./Editor.log \
+      -logFile /dev/stdout \
       -quit \
       -returnlicense
 fi

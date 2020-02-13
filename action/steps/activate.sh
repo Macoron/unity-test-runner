@@ -23,7 +23,7 @@ if [[ -n "$UNITY_LICENSE" ]]; then
     /opt/Unity/Editor/Unity \
       -batchmode \
       -nographics \
-      -logFile ./Editor.log \
+      -logFile /dev/stdout \
       -quit \
       -manualLicenseFile $FILE_PATH)
 
@@ -62,7 +62,7 @@ elif [[ -n "$UNITY_SERIAL" && -n "$UNITY_EMAIL" && -n "$UNITY_PASSWORD" ]]; then
     /opt/Unity/Editor/Unity \
       -batchmode \
       -nographics \
-      -logFile ./Editor.log \
+      -logFile /dev/stdout \
       -quit \
       -serial "$UNITY_SERIAL" \
       -username "$UNITY_EMAIL" \
