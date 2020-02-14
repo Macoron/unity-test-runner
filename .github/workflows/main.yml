@@ -55,7 +55,7 @@ jobs:
       - uses: actions/upload-artifact@v1
         with:
           name: Test results for ${{ matrix.testMode }}
-          path: ${{ steps.tests.outputs.artifactsPath }}
+          path: ${{ matrix.testMode }}-artifacts
 
   testRunnerInAllModes:
     name: Test all modes ✨
@@ -142,7 +142,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: Test results (edit mode)
-          path: ${{ steps.editMode.outputs.artifactsPath }}
+          path: artifacts/editmode
 
   testRunnerInPlayMode:
     name: Test play mode 📺
